@@ -1,0 +1,132 @@
+{
+
+  "HM_associated":{
+    "make":"FALSE",
+    "title":"RELA associated genes in UP_-cGAMP-TSA_+cGAMP-TSA conditon\n Z-scores of TPM values, ISG genes included",
+    "file_int":"../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/with_ISG/TF_analysis/Genes_associated_with_TF/UP_-cGAMP-TSA_+cGAMP-TSA_RELA_associated_genes.tsv",
+    "filename":"HM_RELA_associated_genes.pdf"
+  },
+
+  "TF":{
+    "make":"TRUE",
+    "filepaths": ["../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/with_ISG/TF_analysis/ranking/UP_-cGAMP-TSA_+cGAMP-TSA_ranking_TFs.tsv",
+    "../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/with_ISG/TF_analysis/ranking/DOWN_+cGAMP-TSA_+cGAMP+TSA_ranking_TFs.tsv",
+    "../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/with_ISG/TF_analysis/ranking/UP_set5_ranking_TFs.tsv"],
+    "names":["UP +cGAMP-TSA / -cGAMP-TSA", "DOWN +cGAMP+TSA / -cGAMP-TSA",
+             "UP Set 5"],
+    "orders":[3, 2, 1],
+    "title":"Transcription factors enriched or depleted in our dataset via GSEA ranking. ISG genes were included in the analysis",
+    "filename":"Recap_TF.pdf"
+  },
+
+  "HM_Top_DEG":{
+    "make":"TRUE",
+    "title":"Heatmap of Top 50 differential genes of each set",
+    "filename":"HM_Top_DEG.pdf"
+  },
+
+  "Scatter_plot":{
+    "make":"TRUE",
+    "indexes":[1,2],
+    "title": "Log2(FC) values of genes differential with cGAMP and with additional TSA",
+    "filename":"Scatter_plot_DE_+cGAMP_+cGAMP+TSA.pdf"
+  },
+
+  "Recap_HM":{
+    "make":"TRUE",
+    "list_DE_file":["../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/DE_tables/UP_-cGAMP-TSA_+cGAMP-TSA.tsv",
+    "../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/DE_tables/DOWN_-cGAMP-TSA_+cGAMP-TSA.tsv"],
+    "number_of_plots":1,
+    "titles":["Z-scores of TPM values of \ngenes up-regulated by cGAMP", "Z-scores of TPM values of \ngenes down-regulated by cGAMP"],
+    "filenames":["HM_UP_cGAMP.pdf", "HM_DOWN_cGAMP.pdf"],
+    "logic":["union", "union"],
+    "list_genes":[""],
+    "n":10000
+  },
+
+  "Recap_HM_ISG_only":{
+    "make":"TRUE",
+    "list_DE_file":["../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/DE_tables/UP_-cGAMP-TSA_+cGAMP-TSA.tsv",
+    "../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/DE_tables/DOWN_-cGAMP-TSA_+cGAMP-TSA.tsv"],
+    "number_of_plots":1,
+    "titles":["Z-scores of TPM values of \nISG genes up-regulated by cGAMP", "Z-scores of TPM values of \nISG genes down-regulated by cGAMP"],
+    "filenames":["HM_UP_cGAMP_ISG_ONLY.pdf", "HM_DOWN_cGAMP_ISG_ONLY.pdf"],
+    "logic":["union", "union"],
+    "list_genes":[""],
+    "n":10000
+  },
+
+  "Pathway_plots":{
+    "make":"TRUE",
+    "n":20,
+    "list_pathways":["../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/with_ISG/Pathway_analysis/UP/+cGAMP-TSA_+cGAMP+TSA_MF_UP.Robj",
+    "../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/with_ISG/Pathway_analysis/DOWN/+cGAMP-TSA_+cGAMP+TSA_MF_DOWN.Robj",
+    "../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/with_ISG/Pathway_analysis/UP/-cGAMP-TSA_+cGAMP-TSA_MF_UP.Robj",
+    "../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/with_ISG/Pathway_analysis/DOWN/-cGAMP-TSA_+cGAMP-TSA_MF_DOWN.Robj",
+    "../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/with_ISG/Pathway_analysis/UP/+cGAMP-TSA_+cGAMP+TSA_BP_UP.Robj",
+    "../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/with_ISG/Pathway_analysis/DOWN/+cGAMP-TSA_+cGAMP+TSA_BP_DOWN.Robj",
+    "../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/with_ISG/Pathway_analysis/UP/-cGAMP-TSA_+cGAMP-TSA_BP_UP.Robj",
+    "../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/with_ISG/Pathway_analysis/DOWN/-cGAMP-TSA_+cGAMP-TSA_BP_DOWN.Robj",
+    "../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/with_ISG/Pathway_analysis/UP/+cGAMP-TSA_+cGAMP+TSA_CC_UP.Robj",
+    "../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/with_ISG/Pathway_analysis/DOWN/+cGAMP-TSA_+cGAMP+TSA_CC_DOWN.Robj",
+    "../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/with_ISG/Pathway_analysis/UP/-cGAMP-TSA_+cGAMP-TSA_CC_UP.Robj",
+    "../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/with_ISG/Pathway_analysis/DOWN/-cGAMP-TSA_+cGAMP-TSA_CC_DOWN.Robj",
+    "../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/with_ISG/Pathway_analysis/UP/+cGAMP-TSA_+cGAMP+TSA_Kegg_UP.Robj",
+    "../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/with_ISG/Pathway_analysis/DOWN/+cGAMP-TSA_+cGAMP+TSA_Kegg_DOWN.Robj",
+    "../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/with_ISG/Pathway_analysis/UP/-cGAMP-TSA_+cGAMP-TSA_Kegg_UP.Robj",
+    "../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/with_ISG/Pathway_analysis/DOWN/-cGAMP-TSA_+cGAMP-TSA_Kegg_DOWN.Robj"],
+    "list_DE_file":["../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/DE_tables/UP_+cGAMP-TSA_+cGAMP+TSA.tsv",
+    "../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/DE_tables/DOWN_+cGAMP-TSA_+cGAMP+TSA.tsv",
+    "../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/DE_tables/UP_-cGAMP-TSA_+cGAMP-TSA.tsv",
+    "../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/DE_tables/DOWN_-cGAMP-TSA_+cGAMP-TSA.tsv",
+    "../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/DE_tables/UP_+cGAMP-TSA_+cGAMP+TSA.tsv",
+    "../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/DE_tables/DOWN_+cGAMP-TSA_+cGAMP+TSA.tsv",
+    "../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/DE_tables/UP_-cGAMP-TSA_+cGAMP-TSA.tsv",
+    "../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/DE_tables/DOWN_-cGAMP-TSA_+cGAMP-TSA.tsv",
+    "../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/DE_tables/UP_+cGAMP-TSA_+cGAMP+TSA.tsv",
+    "../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/DE_tables/DOWN_+cGAMP-TSA_+cGAMP+TSA.tsv",
+    "../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/DE_tables/UP_-cGAMP-TSA_+cGAMP-TSA.tsv",
+    "../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/DE_tables/DOWN_-cGAMP-TSA_+cGAMP-TSA.tsv",
+    "../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/DE_tables/UP_+cGAMP-TSA_+cGAMP+TSA.tsv",
+    "../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/DE_tables/DOWN_+cGAMP-TSA_+cGAMP+TSA.tsv",
+    "../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/DE_tables/UP_-cGAMP-TSA_+cGAMP-TSA.tsv",
+    "../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/DE_tables/DOWN_-cGAMP-TSA_+cGAMP-TSA.tsv"],
+    "titles":["Top GO MF enriched pathways with genes \nup-regulated by cGAMP and additional TSA",
+    "Top GO MF enriched pathways with genes \ndown-regulated by cGAMP and additional TSA",
+     "Top GO MF enriched pathways with genes \nup-regulated by cGAMP",
+     "Top GO MF enriched pathways with genes \ndown-regulated by cGAMP",
+     "Top GO BP enriched pathways with genes \nup-regulated by cGAMP and additional TSA",
+     "Top GO BP enriched pathways with genes \ndown-regulated by cGAMP and additional TSA",
+     "Top GO BP enriched pathways with genes \nup-regulated by cGAMP",
+     "Top GO BP enriched pathways with genes \ndown-regulated by cGAMP",
+     "Top GO CC enriched pathways with genes \nup-regulated by cGAMP and additional TSA",
+     "Top GO CC enriched pathways with genes \ndown-regulated by cGAMP and additional TSA",
+     "Top GO CC enriched pathways with genes \nup-regulated by cGAMP",
+     "Top GO CC enriched pathways with genes \ndown-regulated by cGAMP",
+     "Top GO Kegg enriched pathways with genes \nup-regulated by cGAMP and additional TSA",
+     "Top GO Kegg enriched pathways with genes \ndown-regulated by cGAMP and additional TSA",
+     "Top GO Kegg enriched pathways with genes \nup-regulated by cGAMP",
+     "Top GO Kegg enriched pathways with genes \ndown-regulated by cGAMP"],
+    "filenames":["Pathways_MF_plot_UP_+cGAMP+TSA.pdf", "Pathways_MF_plot_DOWN_+cGAMP+TSA.pdf",
+    "Pathways_MF_plot_UP_+cGAMP.pdf", "Pathways_MF_plot_DOWN_+cGAMP.pdf",
+    "Pathways_BP_plot_UP_+cGAMP+TSA.pdf", "Pathways_BP_plot_DOWN_+cGAMP+TSA.pdf",
+    "Pathways_BP_plot_UP_+cGAMP.pdf", "Pathways_BP_plot_DOWN_+cGAMP.pdf",
+    "Pathways_CC_plot_UP_+cGAMP+TSA.pdf", "Pathways_CC_plot_DOWN_+cGAMP+TSA.pdf",
+    "Pathways_CC_plot_UP_+cGAMP.pdf", "Pathways_CC_plot_DOWN_+cGAMP.pdf",
+    "Pathways_Kegg_plot_UP_+cGAMP+TSA.pdf", "Pathways_Kegg_plot_DOWN_+cGAMP+TSA.pdf",
+    "Pathways_Kegg_plot_UP_+cGAMP.pdf", "Pathways_Kegg_plot_DOWN_+cGAMP.pdf"]
+  },
+
+  "Venn_DE_sets":{
+    "make":"TRUE",
+    "list_DE_file":["../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/DE_tables/UP_-cGAMP-TSA_+cGAMP-TSA.tsv",
+      "../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/DE_tables/DOWN_+cGAMP-TSA_+cGAMP+TSA.tsv",
+      "../analysis/2) TPM_Threshold_1/LogFC_Threshold_1/DE_tables/DOWN_-cGAMP-TSA_-cGAMP+TSA.tsv"],
+    "filenames":["Venn_UP_+cGAMP_DOWN_+TSA_+cGAMP+TSA.pdf"],
+    "categories":[["UP +cGAMP", "DOWN +cGAMP+TSA", "DOWN +TSA"]]
+  },
+
+  "Boxplot_IFN":{
+    "make":"TRUE"
+  }
+}
